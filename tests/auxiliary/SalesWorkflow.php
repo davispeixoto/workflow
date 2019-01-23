@@ -10,11 +10,10 @@ namespace Davispeixoto\Workflow\Tests\Auxiliary;
 
 use Davispeixoto\Workflow\Transition;
 use Davispeixoto\Workflow\Workflow;
-use MyCLabs\Enum\Enum;
 
 class SalesWorkflow extends Workflow
 {
-    public function __construct(Enum $initialStatus)
+    public function __construct(SalesStates $initialStatus)
     {
         parent::__construct($initialStatus);
 
