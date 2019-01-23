@@ -1,0 +1,57 @@
+{
+  "name": "davispeixoto/workflow",
+  "description": "A PHP package for managing state transitions",
+  "license": "MIT License",
+  "keywords": [
+    "FSM",
+    "state transition",
+    "enum",
+    "transition"
+  ],
+  "authors": [
+    {
+      "name": "Davis Peixoto",
+      "email": "davis.peixoto@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "myclabs/php-enum": "1.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~6.2",
+    "phpstan/phpstan": "~0.8",
+    "squizlabs/php_codesniffer": "^2.3",
+    "behat/behat": "~3.0",
+    "friendsofphp/php-cs-fixer": "^2.11",
+    "phpmd/phpmd": "^2.6",
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Davispeixoto\\Workflow\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Davispeixoto\\Workflow\\Tests\\": "tests",
+      "Davispeixoto\\Workflow\\Tests\\Auxiliary\\": "tests/auxiliary"
+    }
+  },
+  "scripts": {
+    "phpstan": "vendor/bin/phpstan analyse src --level=7",
+    "phpunit": "vendor/bin/phpunit --verbose --colors=always",
+    "behat": "vendor/bin/behat --colors",
+    "phpcs": "vendor/bin/phpcs src tests --standard=psr2 -sp --colors",
+    "phpcs-fixer-src": "vendor/bin/php-cs-fixer fix src",
+    "phpcs-fixer-tests": "vendor/bin/php-cs-fixer fix tests",
+    "test": [
+      "@phpstan",
+      "@phpunit",
+      "@behat",
+      "@phpcs-fixer-src",
+      "@phpcs-fixer-tests",
+      "@phpcs"
+    ]
+  }
+}
