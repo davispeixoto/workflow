@@ -9,10 +9,10 @@
 namespace Davispeixoto\Workflow;
 
 use Davispeixoto\Workflow\Exceptions\InvalidTransitionException;
-use Davispeixoto\Workflow\Interfaces\Workflow as IWorkflow;
+use Davispeixoto\Workflow\Interfaces\WorkflowInterface;
 use MyCLabs\Enum\Enum;
 
-abstract class Workflow implements IWorkflow
+abstract class AbstractWorkflow implements WorkflowInterface
 {
     /**
      * @var Transition[]
@@ -30,7 +30,7 @@ abstract class Workflow implements IWorkflow
     protected $currentStatus;
 
     /**
-     * Workflow constructor.
+     * WorkflowInterface constructor.
      * @param Enum $initialStatus
      */
     public function __construct(Enum $initialStatus)

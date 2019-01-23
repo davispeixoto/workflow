@@ -11,7 +11,7 @@ namespace Davispeixoto\Workflow\Interfaces;
 use Davispeixoto\Workflow\Exceptions\InvalidTransitionException;
 use MyCLabs\Enum\Enum;
 
-interface Workflow
+interface WorkflowInterface
 {
     /**
      * @return Enum
@@ -20,6 +20,7 @@ interface Workflow
 
     /**
      * @param Enum $status
+     * @return void
      * @throws InvalidTransitionException
      */
     public function setCurrentStatus(Enum $status) :void;

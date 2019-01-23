@@ -9,9 +9,9 @@
 namespace Davispeixoto\Workflow\Tests\Auxiliary;
 
 use Davispeixoto\Workflow\Transition;
-use Davispeixoto\Workflow\Workflow;
+use Davispeixoto\Workflow\AbstractWorkflow;
 
-class SalesWorkflow extends Workflow
+class SalesWorkflow extends AbstractWorkflow
 {
     public function __construct(SalesStates $initialStatus)
     {

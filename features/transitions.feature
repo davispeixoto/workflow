@@ -9,19 +9,19 @@ Feature: Lifecycle transitions
   - I can check if a state represents an end in a lifecycle
 
   Background:
-    Given I have the following states for sales:
+    Given there is the following states for sales:
     | State   | Finished |
     | NEW     | 0        |
     | DEALING | 0        |
     | WON     | 1        |
     | LOST    | 1        |
-    And I have the following sales lifecycle
+    And there is the following sales lifecycle
     | X       | NEW | DEALING | WON | LOST |
     | NEW     | X   | 1       | 0   | 0    |
     | DEALING | 0   | X       | 1   | 1    |
     | WON     | 0   | 0       | X   | 0    |
     | LOST    | 0   | 0       | 0   | X    |
-    And I build the background
+    And there is the background
 
   Scenario: Making a valid transition
     Given There is a sale in NEW state

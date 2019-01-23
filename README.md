@@ -1,4 +1,4 @@
-# Workflow
+# WorkflowInterface
 A PHP package for dealing with state transitions.
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/davispeixoto/workflow.svg)](https://packagist.org/packages/davispeixoto/workflow)
@@ -59,10 +59,10 @@ Then you can create your workflow based on valid transitions
 
 ```php
 <?php
-use Davispeixoto\Workflow\Transition;
-use Davispeixoto\Workflow\Workflow;
+use Davispeixoto\WorkflowInterface\Transition;
+use Davispeixoto\WorkflowInterface\WorkflowInterface;
 
-class SalesWorkflow extends Workflow
+class SalesWorkflow extends WorkflowInterface
 {
     public function __construct(SalesStates $initialStatus)
     {

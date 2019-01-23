@@ -46,25 +46,25 @@ class FeatureContext implements Context
     }
 
     /**
-     * @Given I have the following states for sales:
+     * @Given there is the following states for sales:
      */
-    public function iHaveTheFollowingStatesForSales(TableNode $table)
+    public function thereIsTheFollowingStatesForSales(TableNode $table)
     {
         return true;
     }
 
     /**
-     * @Given I have the following sales lifecycle
+     * @Given there is the following sales lifecycle
      */
-    public function iHaveTheFollowingSalesLifecycle(TableNode $table)
+    public function thereIsTheFollowingSalesLifecycle(TableNode $table)
     {
         return true;
     }
 
     /**
-     * @Given I build the background
+     * @Given there is the background
      */
-    public function iBuildTheBackground()
+    public function thereIsTheBackground()
     {
         return true;
     }
