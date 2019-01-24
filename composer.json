@@ -1,7 +1,7 @@
 {
   "name": "davispeixoto/workflow",
   "description": "A PHP package for managing state transitions",
-  "license": "MIT License",
+  "license": "MIT",
   "keywords": [
     "FSM",
     "state transition",
